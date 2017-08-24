@@ -1,0 +1,24 @@
+{%extends "accounts/base.html"%}
+{%load crispy_forms_tags%}
+
+
+
+{%block content%}
+<div class='col-sm-6 col-sm-offset-3'>
+<div class='jumbotron' style="background-color:white">
+
+<h3>Docln</h3>
+<h1 style="color:orange">{{title}}</h1>
+<hr/>
+
+<div class="jumbotron" style="background-color:beige">
+<form method='POST' action='' enctype='multipart/form-data'>{%csrf_token%}
+{{form|crispy}}
+<br/>
+<input type='submit' class='btn btn-default' value='{{title}}' />
+</form>
+</div>
+</div>
+</div>
+{%endblock content%}
+
